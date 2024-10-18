@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://buo7k2hldgg2v"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_ry6b0"]
+[ext_resource type="Texture2D" uid="uid://dptq2l8fo626s" path="res://assets/tilemap.png" id="2_1qlrg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1lqqw"]
+size = Vector2(13, 12)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ry6b0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1qlrg")
+region_enabled = true
+region_rect = Rect2(0.989426, 118.446, 15.2675, 16.9639)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_1lqqw")
